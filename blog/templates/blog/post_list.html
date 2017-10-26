@@ -12,11 +12,25 @@
         <p>
             published: 26/10/2017, 15:36
         </p>
-        <h2><a href="">My first post</a></h2>
+        <h2><a href="">My first live post</a></h2>
         <p>
             There was a lot of self-satisfied pretentious crap in here so
             I deleted it and added my own whinge instead.
         </p>
+    </div>
+    <div>
+        <h2><a href="">All Published Posts</a></h2>
+        {% for post in posts %}
+        <div>
+            <p>
+                published: {{ post.published_date }}
+            </p>
+            <h3><a href="">{{ post.title }}</a></h3>
+            <p>
+                {{ post.text|linebreaksbr }}
+            </p>
+        </div>
+        {% endfor %}
     </div>
 </body>
 </html>

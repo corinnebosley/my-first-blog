@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 
+
+# Classes in here are all models (objects) for Django to query.
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
