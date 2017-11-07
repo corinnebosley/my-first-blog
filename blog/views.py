@@ -21,6 +21,7 @@ def post_list(request):
     # fields in the template.
     return render(request, 'blog/post_list.html', {'posts': posts})
 
+
 # This is for a single post in detail.
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
